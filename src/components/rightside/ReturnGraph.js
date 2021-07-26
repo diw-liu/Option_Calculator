@@ -26,12 +26,11 @@ const ReturnGraph = (props) =>{
       }else{
          setShow(false)
       }
-      
    }
 
    return(
-      <div>
-         <div onClick={handleReturn}>
+      <div className="m-3 ">
+         <div className="w-10/12 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" onClick={handleReturn}>
             Return Graph 
          </div>  
          {

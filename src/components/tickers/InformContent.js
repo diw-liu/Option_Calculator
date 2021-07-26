@@ -3,26 +3,18 @@ import LeftSide                     from '../leftside/LeftSide'
 import RightSide                    from '../rightside/RightSide'
 
 const InformContent = (props) =>{
-    
-    // useEffect(() => {
-    //     const intervalId = setInterval(() => {
-    //         if (Object.entries(props.ticker).length !== 0) {
-    //             console.log("useE call")
-    //             fetch('/api/ticker', {
-    //                 method: 'POST',
-    //                 body: JSON.stringify({
-    //                     content:props.ticker.symbol
-    //                 }),
-    //                 headers:{ 'Content-Type' : 'application/json'}
-    //             }).then(response => response.json())
-    //               .then(message => props.setTicker(message))
-    //         }
-    //     }, 5000);
-    //     return () => clearInterval(intervalId)
-    // },[] )
+    console.log(props.ticker['symbol'])
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            if (Object.entries(props.ticker).length !== 0) {
+                props.getTicker(props.ticker['symbol'])
+            }
+        }, 5000);
+        return () => clearInterval(intervalId)
+    },[])
 
     return(
-       <div className="grid grid-cols-2 divide-x divide-green-500">
+       <div className="grid grid-cols-2 divide-x">
            <LeftSide getOptionDate={props.getOptionDate} ticker={props.ticker}
                 optionList={props.optionList} deleteOptions={props.deleteOptions}/>
            <RightSide ticker={props.ticker} 

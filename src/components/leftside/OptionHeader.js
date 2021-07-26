@@ -7,11 +7,12 @@ const OptionHeader = (props) =>{
    }
 
     return(
-       <div className="mx-8 grid grid-cols-2 grid-flow-col gap-4">  
-           <div className="font-mono "> Option Name </div>
-           <div className="font-mono "> Type </div>
-           <div className="font-mono "> Price </div>
-       </div>
+      <div className="mx-8 grid grid-cols-3 grid-flow-col gap-20">  
+           <div className="text-left text-xs font-medium text-gray-500 uppercase tracking-wider "> Option Name </div>
+           <div className="text-left text-xs font-medium text-gray-500 uppercase tracking-wider "> Type </div>
+           <div className="text-left text-xs font-medium text-gray-500 uppercase tracking-wider "> Price </div>
+           <div className="text-left text-xs font-medium text-gray-500 uppercase tracking-wider ">  </div>
+      </div>
     )
 }
 

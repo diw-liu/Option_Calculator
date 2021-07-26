@@ -8,12 +8,12 @@ const OptionEntry = (props) =>{
     }
 
     return(
-       <div className="grid grid-cols-2 grid-flow-col gap-2">  
-           <div > {data.symbol} {data.date} {data.type}{data.strike} </div>
-           <div > {data.long ? "Long" : "Short"} </div>
-           <div > {data.price} </div>
-           <div onClick={handleDelete} > X </div>
-       </div>
+        <div className="mx-8 mt-8 grid grid-cols-3 grid-flow-col gap-20">  
+            <div className="text-left text-base font-medium text-gray-500 uppercase tracking-wider " > {data.symbol} {data.date} {data.type}{data.strike} </div>
+            <div className="text-left text-base font-medium text-gray-500 uppercase tracking-wider " > {data.long ? "Long" : "Short"} </div>
+            <div className="text-left text-base font-medium text-gray-500 uppercase tracking-wider ml-8" > {data.price} </div>
+            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={handleDelete} > X </button>
+        </div>
     )
 }
 

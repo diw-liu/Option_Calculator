@@ -26,8 +26,11 @@ const HomeScreen = (props) => {
     const [cost, setCost]               = useState(0);
 
     const clickHome = async () => {
-        setTicker("");
-        // fetch("/api/greek'");
+        setTicker({});
+        setList([])
+        setGraph({})
+        setTable([])
+        setCost(0)
     }
 
     const getTicker = async (ticker) => {

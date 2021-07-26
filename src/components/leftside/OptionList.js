@@ -8,14 +8,19 @@ const OptionList = (props) =>{
    }
 
     return(
-       <div className="m-8 rounded-lg border-red-500 bg-gray-300" style={{ height: "60vh" }}>
-          <OptionHeader />
-          <OptionTable optionList={props.optionList} deleteOptions={props.deleteOptions}/>
-          <div className="flex gap-4 ">
+      <div className="m-8 rounded-lg overflow-auto" style={{ height: "60vh" }}>
+         <table className="table-fixed min-w-full divide-y divide-gray-200" style={{ height: "55vh" }} >
+            <thead className="bg-gray-50">
+               <OptionHeader />
+            </thead>
+            <tbody className="bg-white divide-y divide-gray-200" >
+               <OptionTable optionList={props.optionList} deleteOptions={props.deleteOptions}/>
+            </tbody>
+         </table>
+         <div className="flex gap-4 bg-gray-300">
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={handleAddOption}> Add Option </button>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> Calculate </button> 
-          </div>
-       </div>
+         </div>
+      </div>
     )
 }
 
