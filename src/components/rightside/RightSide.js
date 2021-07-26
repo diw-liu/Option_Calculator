@@ -7,7 +7,7 @@ const RightSide = (props) =>{
     return(
        <div>
            <StockChart ticker={props.ticker}/>
-           <ReturnTable returnTable={props.returnTable} table={props.table}/>
+           <ReturnTable returnTable={props.returnTable} table={props.table} cost={props.cost}/>
            <ReturnGraph returnGraph={props.returnGraph} graph={props.graph}/>
        </div>
     )

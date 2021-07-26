@@ -11,7 +11,9 @@ const ReturnTable = (props) =>{
 
    const getColor = (value) => {
       //value from 0 to 1
-      var hue=((1-(-value+1))*120).toString(10);
+      var hue=((value+1)/2*120).toString(10);
+      hue = hue > 120 ? 120 : hue
+      hue = hue < 0 ? 0 : hue
       return ["hsl(",hue,",100%,50%)"].join("");
    }
 
@@ -31,7 +33,7 @@ const ReturnTable = (props) =>{
                   <tbody className="bg-white divide-y divide-gray-200" >
                   {
                      props.table.map((entry,index) => ( 
-                        <ReturnTableEntry data={entry} />
+                        <ReturnTableEntry data={entry} getColor={getColor} cost={props.cost}/>
                      ))
                   }
                   </tbody>

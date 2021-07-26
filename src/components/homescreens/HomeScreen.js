@@ -205,6 +205,7 @@ const HomeScreen = (props) => {
                             optionList={optionList} deleteOptions={deleteOptions}
                             returnGraph={returnGraph} graph={graph}
                             returnTable={returnTable} table={table}
+                            cost={cost}
                           />
                 }
             </div>

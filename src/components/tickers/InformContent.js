@@ -27,7 +27,8 @@ const InformContent = (props) =>{
                 optionList={props.optionList} deleteOptions={props.deleteOptions}/>
            <RightSide ticker={props.ticker} 
                 returnGraph={props.returnGraph} graph={props.graph}
-                returnTable={props.returnTable} table={props.table}/>
+                returnTable={props.returnTable} table={props.table}
+                cost={props.cost}/>
        </div>
     )
 }
