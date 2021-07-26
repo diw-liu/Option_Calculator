@@ -1,8 +1,10 @@
 Option_Calculator
+-----------------------------------------------------
 
 React web application that allows user to monitor option price and
-examine option strategies with payoff graph and return table.
+examine option strategies with payoff graph and return table
 
+-----------------------------------------------------------
 In the project directory, in order to run:
 
 ### `npm start`
